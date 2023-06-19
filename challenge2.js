@@ -1,15 +1,14 @@
-function checkSpeed(speed) {
-    const limit = 70
-    const points = 0
-   if(speed <= limit) {
-    return 'okay'
-   }else {
-    const excess =speed -limit
-    const points = excess
-    if("Points:", points){
-return "LICENCE CANCELED"
-   }else {
-    return "points" + points
-   }
-}
-}
+let speed = prompt("Enter the car's speed:")
+speed = parseFloat(speed);
+demeritPoints = 0;
+
+if (speed < 70) {
+    console.log("Ok");
+}else {
+    demeritPoints = Math.floor((speed - 70) / 5);
+    if (demeritPoints > 12) {
+        console.log("License suspended");
+      } else {
+        console.log("Points: " + demeritPoints);
+      }
+    }

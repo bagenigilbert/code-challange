@@ -1,42 +1,19 @@
-function calculateDeduction(grossPay) {
-
-    let deduction = 0;
-
- 
-
-    if (grossPay >= 6000 && grossPay <= 7999) {
-
-      deduction = 300;
-
-    } else if (grossPay >= 8000 && grossPay <= 11999) {
-
-      deduction = 400;
-
-    } else if (grossPay >= 12000 && grossPay <= 14999) {
-
-      deduction = 500;
-
-    } else if (grossPay >= 15000 && grossPay <= 19999) {
-
-      deduction = 600;
-
-    } else if (grossPay >= 20000 && grossPay <= 24999) {
-
-      deduction = 750;
-
-    } else if (grossPay >= 25000 && grossPay <= 29999) {
-
-      deduction = 850;
-
-    } else if (grossPay >= 30000 && grossPay <= 34999) {
-
-      deduction = 900;
-
-    } else if (grossPay >= 35000 && grossPay <= 39999) {
-
-      deduction = 950;
-
-    } else if (grossPay >= 40000 && grossPay ){
-        
-    }
+let marks = prompt("Enter the student's marks (between 0 and 100):");
+marks = parseFloat(marks);
+if (isNaN(marks) || marks < 0 || marks > 100) {
+  console.log("Invalid input. Please enter a number between 0 and 100.");
+} else {
+  var grade;
+  if (marks > 79) {
+    grade = 'A';
+  } else if (marks >= 60 && marks <= 79) {
+    grade = 'B';
+  } else if (marks >= 50 && marks <= 59) {
+    grade = 'C';
+  } else if (marks >= 40 && marks <= 49) {
+    grade = 'D';
+  } else {
+    grade = 'E';
+  }
+  console.log("Grade: " + grade);
 }

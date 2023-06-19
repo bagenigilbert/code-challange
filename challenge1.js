@@ -1,18 +1,19 @@
 
-let score = prompt("Enter the score: ");
-score = Number(score);
+let marks = prompt("Enter the score: ");
+marks = Number(marks);
 let grade;
-if (score >= 80) {
-grade = "A";
-} else if (score >= 60 && score <= 79) {
-grade = "B";
-} else if (score >= 50 && score <= 59) {
-grade = "C";
-} else if (score >= 40 && score <= 49) {
-grade = "D";
-} else {
-grade = "E";
-}
+if (marks > 79) {
+    grade = 'A';
+  } else if (marks >= 60 && marks <= 79) {
+    grade = 'B';
+  } else if (marks >= 50 && marks <= 59) {
+    grade = 'C';
+  } else if (marks >= 40 && marks <= 49) {
+    grade = 'D';
+  } else {
+    grade = 'E';
+  }
+
 
 console.log(`The grade is ${grade}.`);
 
